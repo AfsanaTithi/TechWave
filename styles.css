@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    .inter-font{
+    font-family: "Inter", sans-serif;
+    }
+
+/* navbar related design */
+
+header {
+    background: var(--Linear, linear-gradient(47.64deg, #1A0B2E,rgba(26, 11, 46, 1)));
+    border-bottom: 1px solid rgba(65, 37, 103, 1);
+    padding: 16px 200px 16px 200px;
+
+}
+
+.container{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1440px;
+    margin:0 auto ;
+}
+.tech-logo{
+   color: #FFF;
+   font-size: 32px
+}
+
+.logo-img {
+    width: 220px;
+    height: 32px;
+    object-fit: cover;
+}
+.logo-text {
+ background: linear-gradient(
+    90deg,
+    #F7E93F 0%,
+    #FB09B4 50%,
+    #9100F8 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   
+}
+.nav-list{
+    display: flex;
+    gap: 32px;
+}
+.nav-item{
+    list-style: none;
+    color: var(--#FFFFFF, rgba(255, 255, 255, 1));
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFF;
+}
+        /* banner related design */
+main{
+    width: 100%
+}
+.banner {
+     background-color: rgba(26, 11, 46, 1);
+}
+.banner-section{
+    position: relative;
+}
+.banner-bg-img{
+    width: 100%;
+    
+}
+.banner-circle-img {
+    position: absolute;
+    top: 13%;
+    left: 41%;
+}
+
+.micro-phn-img {
+    position: absolute;
+    top: 20%;
+    left: 47%;
+}
+
+.banner-text-section {
+    position: absolute;
+    bottom: 16%;
+    left: 38%;
+    text-align: center;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    gap: 20px;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.banner-description {
+    color: #fff;
+}
+    /* button related design */
+.btn-primary{
+    height: 44px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)));
+    border-radius: 24px;
+    border: none;
+    color:#ffffff;
+}
+.btn-primary p{
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+
+.btn-subscribe{
+   padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #00FF88;
+    border: 1px solid #00FF88;
+    border-radius: 24px;
+    background-color: transparent;
+}
+
+.Podcast-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-direction: column;
+    background-color: rgba(26, 11, 46, 1);
+   color: #fff;
+   padding-bottom: 60px;
+  
+}
+.About-Podcast {
+    max-width: 1040px;
+    text-align: center;
+}
+
+.section-title{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.ratings-section {
+    display: flex;
+    gap: 80px;
+    width: 1440px;
+    margin-top: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.podcast-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.rating {
+    color: #00FF88;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.rating-text {
+   color: #FFFFFF;
+   font-size: 16px;
+   font-weight: 400; 
+}
+
+.monthly-episodes{
+    color: #00FF88;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.Episodes Published{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.average{
+    color: #00FF88;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.Average Rating{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight:400; 
+}
+
+.Experts-rating{
+    color: #00FF88;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.Industry Experts{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tech-container{
+    background: rgba(35, 14, 61, 1);
+    color: #FFFFFF;
+    padding: 100px 200px 100px 200px;
+    
+}
+
+.tech-title{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 45px;
+}
+
+.techwave{
+   max-width: 1200px;
+   margin: 0 auto; 
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 16px;
+}
+
+.tech-card{
+    border-radius: 38px;
+    background-color: rgba(53, 17, 101, 0.4);
+    padding: 40px;
+}
+
+.tech-card img{
+    height: 60px;
+    width: 60px;
+    margin-bottom: 30px;
+}
+
+.tech-card:nth-child(1){
+    grid-row: span 2;
+}
+
+.tech-card:nth-child(2),
+.tech-card:nth-child(3){
+    grid-column: span 2;
+}
+
+.tech-card:nth-child(4){
+    grid-column: span 3;
+}
+
+.tech-card:nth-child(4){
+    grid-column: span 2;
+}
+
+.featured-episodes{
+    background: rgba(26, 11, 46, 1);
+    padding: 100px 200px 100px 200px;
+    color: #FFFFFF;
+}
+.episodes{
+    display: flex;
+    gap: 40px;
+
+}
+
+.feature-title {
+    text-align: center;
+}
+
+
+.episode-amount{
+    background-color: rgba(37, 13, 68, 1);
+    padding: 20px ;
+    gap: 12px;
+    border-radius: 0 0 20px 20px;
+}
+
+.episode-amount iframe{
+    width: 100%;
+    height: 214px;
+    border-radius: 20 20 0 0;
+    border: none;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* responsive codes */
+
+@media screen and (max-width:576px) {
+
+
+}
