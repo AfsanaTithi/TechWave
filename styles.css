@@ -102,6 +102,7 @@ main {
 .banner-bg-img {
     width: 100%;
     display: block;
+    min-height: 230px;
     height: auto;
 
 }
