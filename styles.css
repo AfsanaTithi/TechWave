@@ -1,34 +1,46 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-    .inter-font{
+body {
+    overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.inter-font {
     font-family: "Inter", sans-serif;
-    }
+}
 
 /* navbar related design */
 
 header {
-    background: var(--Linear, linear-gradient(47.64deg, #1A0B2E,rgba(26, 11, 46, 1)));
+    background: var(--Linear, linear-gradient(47.64deg, #1A0B2E, rgba(26, 11, 46, 1)));
     border-bottom: 1px solid rgba(65, 37, 103, 1);
-    padding: 16px 200px 16px 200px;
+    padding: 16px 80px;
 
 }
 
-.container{
-    
+.container {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1440px;
-    margin:0 auto ;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
-.tech-logo{
-   color: #FFF;
-   font-size: 32px
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.tech-logo {
+    color: #FFF;
+    font-size: 32px
 }
 
 .logo-img {
@@ -36,65 +48,138 @@ header {
     height: 32px;
     object-fit: cover;
 }
+
 .logo-text {
- background: linear-gradient(
-    90deg,
-    #F7E93F 0%,
-    #FB09B4 50%,
-    #9100F8 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-   
+    background: linear-gradient(90deg,
+            #F7E93F 0%,
+            #FB09B4 50%,
+            #9100F8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
-.nav-list{
+
+.nav-list {
     display: flex;
     gap: 32px;
 }
-.nav-item{
+
+.nav-item {
     list-style: none;
     color: var(--#FFFFFF, rgba(255, 255, 255, 1));
     font-size: 16px;
     font-weight: 500;
     color: #FFF;
 }
-        /* banner related design */
-main{
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav-toggle img {
+    width: 28px;
+    height: 28px;
+}
+
+/* banner related design */
+main {
     width: 100%
 }
+
 .banner {
-     background-color: rgba(26, 11, 46, 1);
+    background-color: rgba(26, 11, 46, 1);
 }
-.banner-section{
+
+.banner-section {
     position: relative;
+    overflow: hidden;
 }
-.banner-bg-img{
+
+.banner-bg-img {
     width: 100%;
-    
+    display: block;
+    height: auto;
+
 }
-.banner-circle-img {
+
+.banner-circle-wrap {
     position: absolute;
     top: 13%;
-    left: 41%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 320px;
+    height: 320px;
+}
+
+.banner-circle-img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    background: #00FF88;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    animation: badge-blink 1.4s ease-in-out infinite;
+}
+
+@keyframes badge-blink {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(0.92);
+    }
 }
 
 .micro-phn-img {
     position: absolute;
     top: 20%;
-    left: 47%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 110px;
 }
 
 .banner-text-section {
     position: absolute;
     bottom: 16%;
-    left: 38%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     text-align: center;
-    max-width: 500px;
+    max-width: 520px;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.banner-text-section h1 {
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+.banner-text-section p {
+    font-size: 18px;
 }
 
 .button-group {
@@ -106,27 +191,29 @@ main{
 .banner-description {
     color: #fff;
 }
-    /* button related design */
-.btn-primary{
+
+/* button related design */
+.btn-primary {
     height: 44px;
     padding: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)));
+    background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1)));
     border-radius: 24px;
     border: none;
-    color:#ffffff;
-}
-.btn-primary p{
-    font-size: 16px;
-    font-weight: 600;
-    
+    color: #ffffff;
 }
 
-.btn-subscribe{
-   padding: 12px 20px;
+.btn-primary p {
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.btn-subscribe {
+    padding: 12px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,27 +231,31 @@ main{
     gap: 24px;
     flex-direction: column;
     background-color: rgba(26, 11, 46, 1);
-   color: #fff;
-   padding-bottom: 60px;
-  
+    color: #fff;
+    padding: 80px 200px 60px 200px;
+
 }
+
 .About-Podcast {
     max-width: 1040px;
     text-align: center;
 }
 
-.section-title{
+.section-title {
     font-size: 48px;
     font-weight: 700;
 }
 
 .ratings-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 80px;
-    width: 1440px;
-    margin-top: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .podcast-rating {
@@ -172,6 +263,7 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    text-align: center;
 }
 
 .rating {
@@ -181,126 +273,297 @@ main{
 }
 
 .rating-text {
-   color: #FFFFFF;
-   font-size: 16px;
-   font-weight: 400; 
-}
-
-.monthly-episodes{
-    color: #00FF88;
-    font-size: 48px;
-    font-weight: 900;
-}
-
-.Episodes Published{
-    color: #FFFFFF;
-    font-weight: 400;
-    font-size: 16px;
-}
-
-.average{
-    color: #00FF88;
-    font-size: 48px;
-    font-weight: 900;
-}
-
-.Average Rating{
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight:400; 
-}
-
-.Experts-rating{
-    color: #00FF88;
-    font-size: 48px;
-    font-weight: 900;
-}
-
-.Industry Experts{
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 400;
 }
 
-.tech-container{
+.monthly-episodes {
+    color: #00FF88;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.Episodes Published {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.average {
+    color: #00FF88;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.Average Rating {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.Experts-rating {
+    color: #00FF88;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.Industry Experts {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tech-container {
     background: rgba(35, 14, 61, 1);
     color: #FFFFFF;
-    padding: 100px 200px 100px 200px;
-    
+    padding: 100px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
-.tech-title{
+.tech-title {
     text-align: center;
     font-size: 48px;
     margin-bottom: 45px;
 }
 
-.techwave{
-   max-width: 1200px;
-   margin: 0 auto; 
-   display: grid;
-   grid-template-columns: repeat(4,1fr);
-   gap: 16px;
+
+.techwave {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas:
+        "card1 card2 card2 card2"
+        "card1 card3 card3 card3"
+        "card4 card4 card4 card5";
+    gap: 20px;
 }
 
-.tech-card{
-    border-radius: 38px;
-    background-color: rgba(53, 17, 101, 0.4);
-    padding: 40px;
+.tech-card {
+    border-radius: 28px;
+    background: rgba(44, 12, 79, 0.75);
+    padding: 32px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
-.tech-card img{
+.tech-card img {
     height: 60px;
     width: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 }
 
-.tech-card:nth-child(1){
-    grid-row: span 2;
+.tech-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
-.tech-card:nth-child(2),
-.tech-card:nth-child(3){
-    grid-column: span 2;
+.tech-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.75);
 }
 
-.tech-card:nth-child(4){
-    grid-column: span 3;
+.tech-card:nth-child(1) {
+    grid-area: card1;
 }
 
-.tech-card:nth-child(4){
-    grid-column: span 2;
+.tech-card:nth-child(2) {
+    grid-area: card2;
 }
 
-.featured-episodes{
+.tech-card:nth-child(3) {
+    grid-area: card3;
+}
+
+.tech-card:nth-child(4) {
+    grid-area: card4;
+}
+
+.tech-card:nth-child(5) {
+    grid-area: card5;
+}
+
+.featured-episodes {
     background: rgba(26, 11, 46, 1);
-    padding: 100px 200px 100px 200px;
+    padding: 100px 200px;
     color: #FFFFFF;
 }
-.episodes{
+
+.episodes {
     display: flex;
     gap: 40px;
+    flex-wrap: wrap;
 
+}
+
+.episode-amount {
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 .feature-title {
     text-align: center;
+    margin-bottom: 40px;
 }
 
+.feature-time {
+    display: flex; 
+    align-items: center; 
+    gap:8px; 
+    margin-top: 12px;
+}
 
-.episode-amount{
+.episode-amount {
     background-color: rgba(37, 13, 68, 1);
-    padding: 20px ;
+    padding: 20px;
     gap: 12px;
     border-radius: 0 0 20px 20px;
 }
 
-.episode-amount iframe{
+.episode-amount iframe {
     width: 100%;
     height: 214px;
     border-radius: 20 20 0 0;
     border: none;
-    
+
+}
+
+.host-section {
+    background: rgba(26, 11, 46, 1);
+    padding: 80px 200px 120px 200px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.host-title {
+    text-align: center;
+}
+
+.host-card {
+    width: 100%;
+    max-width: 1040px;
+    background: linear-gradient(130deg, rgba(63, 18, 114, 0.7), rgba(45, 15, 81, 0.95));
+    border-radius: 32px;
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    box-shadow: 0 24px 60px rgba(10, 5, 25, 0.45);
+    border: 1px solid rgba(125, 70, 176, 0.35);
+}
+
+.host-avatar {
+    width: 110px;
+    height: 110px;
+    padding: 6px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+}
+
+.host-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid rgba(26, 11, 46, 1);
+}
+
+.host-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.host-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.host-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.78);
+    max-width: 640px;
+}
+
+.host-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.host-socials a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(26, 11, 46, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.host-socials img {
+    width: 14px;
+    height: 14px;
+}
+
+.footer-section {
+    background-color: rgba(26, 11, 46, 1);
+    background-image: url("./assets/footer-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 200px;
+}
+
+.footer-content {
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.footer-logo {
+    width: 220px;
+    height: auto;
+}
+
+.footer-platforms {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-platforms span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-platforms img {
+    width: 16px;
+    height: 16px;
+}
+
+.footer-note {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 
@@ -322,10 +585,558 @@ main{
 
 
 
-
-    /* responsive codes */
+/* responsive codes */
 
 @media screen and (max-width:576px) {
+    header {
+        padding: 16px 20px;
+    }
 
+    .header-container {
+        width: 100%;
+    }
 
+    .logo-img {
+        width: 160px;
+        height: auto;
+    }
+
+    .nav-list,
+    .header-container .btn-primary {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner {
+        padding: 40px 20px 60px 20px;
+    }
+
+    .banner-section {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .banner-circle-wrap {
+        width: 200px;
+        height: 200px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 6%;
+    }
+
+    .banner-badge {
+        top: 6px;
+        right: 6px;
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    .micro-phn-img {
+        width: 90px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 14%;
+    }
+
+    .banner-text-section {
+        position: static;
+        max-width: 100%;
+        margin: 20px auto 0 auto;
+    }
+
+    .banner-text-section h1 {
+        font-size: 32px;
+    }
+
+    .banner-text-section p {
+        font-size: 14px;
+    }
+
+    .button-group {
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .button-group .btn-primary,
+    .button-group .btn-subscribe {
+        width: calc(50% - 10px);
+        justify-content: center;
+    }
+
+    .Podcast-section {
+        padding: 48px 20px 40px 20px;
+    }
+
+    .About-Podcast {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .podcast-description {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .ratings-section {
+        gap: 24px;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .episodes {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .episode-amount {
+        width: 100%;
+    }
+
+    .featured-episodes {
+        padding: 48px 20px 56px 20px;
+    }
+
+    .tech-container {
+        padding: 48px 20px 60px 20px;
+    }
+
+    .tech-title {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .techwave {
+        grid-template-areas: none;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .tech-card {
+        padding: 24px;
+        width: 100%;
+    }
+
+    .tech-card img {
+        margin-bottom: 16px;
+    }
+
+    .tech-card:nth-child(1),
+    .tech-card:nth-child(2),
+    .tech-card:nth-child(3),
+    .tech-card:nth-child(4),
+    .tech-card:nth-child(5) {
+        grid-column: auto;
+        grid-row: auto;
+        grid-area: auto;
+    }
+
+    .host-section {
+        padding: 48px 20px 60px 20px;
+    }
+
+    .host-title {
+        font-size: 32px;
+    }
+
+    .host-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 24px;
+        gap: 16px;
+    }
+
+    .host-avatar {
+        width: 96px;
+        height: 96px;
+    }
+
+    .host-content {
+        align-items: center;
+    }
+
+    .host-content h3 {
+        font-size: 18px;
+    }
+
+    .host-content p {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .host-socials {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:1360px) and (min-width:1025px) {
+    .Podcast-section {
+        padding: 72px 80px 60px 80px;
+    }
+
+    .banner-section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .banner-bg-img {
+        height: 520px;
+        object-fit: cover;
+    }
+
+    .banner-circle-wrap {
+        width: 280px;
+        height: 280px;
+        top: 10%;
+    }
+
+    .banner-badge {
+        top: 8px;
+        right: 8px;
+    }
+
+    .micro-phn-img {
+        width: 100px;
+        top: 18%;
+    }
+
+    .banner-text-section {
+        bottom: 31%;
+        max-width: 550px;
+    }
+
+    .tech-container {
+        padding: 80px 80px 96px 80px;
+    }
+
+    .techwave {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .host-section {
+        padding: 64px 64px 88px 64px;
+    }
+
+    .host-card {
+        max-width: 100%;
+        padding: 28px 32px;
+        gap: 24px;
+    }
+
+    .host-content p {
+        max-width: 100%;
+    }
+
+    .featured-episodes {
+        padding: 80px 80px 96px 80px;
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width:769px) {
+    .Podcast-section {
+        padding: 64px 48px 56px 48px;
+    }
+
+    .About-Podcast {
+        max-width: 720px;
+    }
+
+    .banner-bg-img {
+        height: 460px;
+        object-fit: cover;
+    }
+
+    .banner-circle-wrap {
+        width: 240px;
+        height: 240px;
+        top: 9%;
+    }
+
+    .banner-badge {
+        top: 8px;
+        right: 8px;
+    }
+
+    .micro-phn-img {
+        width: 90px;
+        top: 16%;
+    }
+
+    .banner-text-section {
+        bottom: 39%;
+        max-width: 480px;
+    }
+
+    .banner-text-section h1 {
+        font-size: 48px;
+    }
+
+    .banner-text-section p {
+        font-size: 16px;
+    }
+
+    .tech-container {
+        padding: 64px 48px 72px 48px;
+    }
+
+    .tech-title {
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+
+    .techwave {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .tech-card {
+        padding: 32px;
+    }
+
+    .host-section {
+        padding: 56px 24px 72px 24px;
+    }
+
+    .host-card {
+        max-width: 100%;
+        padding: 24px 28px;
+        gap: 20px;
+    }
+
+    .host-content p {
+        font-size: 13px;
+        max-width: 100%;
+    }
+
+    .featured-episodes {
+        padding: 64px 48px 80px 48px;
+    }
+}
+
+@media screen and (max-width:1280px) and (min-width:1025px) {
+    header {
+        padding: 16px 48px;
+    }
+
+    .tech-container,
+    .featured-episodes,
+    .host-section,
+    .footer-section {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:577px) {
+    .Podcast-section {
+        padding: 56px 24px 48px 24px;
+    }
+
+    .About-Podcast {
+        max-width: 640px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .podcast-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    header {
+        padding: 16px 24px;
+    }
+
+    .banner-bg-img {
+        height: 440px;
+        object-fit: cover;
+    }
+
+    .banner-circle-wrap {
+        width: 220px;
+        height: 220px;
+        top: 8%;
+    }
+
+    .banner-badge {
+        top: 6px;
+        right: 6px;
+    }
+
+    .micro-phn-img {
+        width: 80px;
+        top: 15%;
+    }
+
+    .banner-text-section {
+        bottom: 41%;
+        max-width: 440px;
+    }
+
+    .banner-text-section h1 {
+        font-size: 40px;
+    }
+
+    .banner-text-section p {
+        font-size: 16px;
+    }
+
+    .tech-container,
+    .featured-episodes,
+    .host-section,
+    .footer-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .tech-title {
+        font-size: 36px;
+        margin-bottom: 28px;
+    }
+
+    .techwave {
+        grid-template-areas: none;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .tech-card {
+        padding: 24px;
+        width: 100%;
+    }
+
+    .tech-card:nth-child(1),
+    .tech-card:nth-child(2),
+    .tech-card:nth-child(3),
+    .tech-card:nth-child(4),
+    .tech-card:nth-child(5) {
+        grid-column: auto;
+        grid-row: auto;
+        grid-area: auto;
+    }
+
+    .host-section {
+        padding: 56px 24px 72px 24px;
+    }
+
+    .host-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 24px;
+        gap: 20px;
+    }
+
+    .host-content p {
+        font-size: 13px;
+    }
+
+    .host-content {
+        align-items: center;
+    }
+
+    .featured-episodes {
+        padding: 56px 24px 72px 24px;
+    }
+
+    .footer-section {
+        padding: 32px 20px;
+    }
+
+    .footer-content {
+        padding: 28px 16px;
+        gap: 12px;
+    }
+
+    .footer-logo {
+        width: 160px;
+    }
+
+    .footer-platforms {
+        gap: 12px 18px;
+        font-size: 12px;
+    }
+
+    .footer-platforms img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .footer-note {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .footer-section {
+        padding: 28px 16px;
+    }
+
+    .footer-content {
+        padding: 24px 14px;
+        gap: 10px;
+    }
+
+    .footer-logo {
+        width: 150px;
+    }
+
+    .footer-platforms {
+        gap: 10px 16px;
+        font-size: 11px;
+    }
+
+    .footer-platforms img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .footer-note {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .ratings-section {
+        gap: 32px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width:577px) {
+    .episodes {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .episode-amount {
+        flex: 0 0 calc(50% - 12px);
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .episodes {
+        flex-wrap: nowrap;
+    }
+
+    .episode-amount {
+        flex: 0 0 calc(33.333% - 26.7px);
+    }
 }
